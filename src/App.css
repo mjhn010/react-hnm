@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+  direction: none;
+  list-style: none;
+}
+.m-r-5px{
+  margin-right: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar-component */
+.login-btn{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1%;
+}
+.nav-logo{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+}
+.menu-area{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  
+}
+.menu-list-box{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: 600;
+}
+.menu-list-box li{
+  padding: 10px;
+}
+.input-class{
+  border: none;
+  border-bottom: 1px solid #2f2f2f;
+  padding-left: 20px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  outline: none;
+}
+.search-box{
+  position: relative;
+  position: absolute;
+  right: 2%;
+  top: 19%;
+}
+.search-icon{
+  position: absolute;
+}
+/* productCard */
+.overflow-hidden{
+  /* width: fit-content; */
+  overflow: hidden;
+}
+.card-img{
+  transition: all 0.2s;
+  
+}
+.card-img:hover{
+transform: scale(1.1);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* login */
+.login-btn{
+  background-color: #fff;
+  border: none;
 }
