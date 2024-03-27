@@ -4,7 +4,7 @@ function ProductCard({item}) {
   return (
     <div>
         <div className='overflow-hidden'>
-      <img className='card-img' src={item?.img}/>
+      <img className='card-img' src={item?.img} alt=''/>
         </div>
         <div>{item?.choice == true ? "Concious choice":""}</div>
         <div>{item?.title}</div>

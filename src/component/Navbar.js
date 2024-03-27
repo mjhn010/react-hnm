@@ -28,7 +28,7 @@ function Navbar() {
         <img onClick={()=>navigate("/")}
           width={100}
           src="https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg"
-        />
+        alt=""/>
       </div>
       <div className="menu-area">
         <ul className="menu-list-box notosanskr">
