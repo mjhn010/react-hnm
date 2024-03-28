@@ -7,6 +7,7 @@ import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import PrivateRoute from './route/PrivateRoute';
 
 // 1. 전체상품페이지,로그인페이지,상품디테일페이지
 // 2. 전체상품페이지에서는 전체 상품을 볼 수 있다.
@@ -17,18 +18,32 @@ import { Navigate } from 'react-router-dom';
 // 7. 로그인을하면 로그아웃이보이고 로그아웃을하면 로그인이 보인다.
 // 8. 상품을 검색할 수 있다.
 function App() {
+  const [authenticate, setAuthenticate] = useState(false) // true면 로그인
+  // const [search, setSearch] = useState('')
+  // const [resultSearch, setResultSearch] = useState('')
 
+  // const searchItem = async (searchItem)=>{
+  //   setSearch(searchItem)
+  //   console.log(search)
+  //   let url = `https://my-json-server.typicode.com/mjhn010/react-hnm/products?q=${search}`
+  //   let response = await fetch(url)
+  //   let data = await response.json()
+  //    const filterData = data.filter((item)=>{
+  //     return Object.values(item).join("").toLowerCase().includes(setSearch().toLowerCase())
+  //   })
+  //   setResultSearch(filterData)
+  // }
 
   useEffect(()=>{
-    
-  },[])
+    console.log("authenticate",authenticate)
+  },[authenticate])
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
         <Route path='/' element={<ProductAll/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route  path='/product/:id' element={<ProductDetail/>}/>
+        <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
+        <Route  path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>
     </div>
   );

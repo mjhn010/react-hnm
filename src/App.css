@@ -3,7 +3,9 @@
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
 }
-
+.d-none{
+  display: none;
+}
 li{
   direction: none;
   list-style: none;
@@ -11,7 +13,9 @@ li{
 .m-r-5px{
   margin-right: 5px;
 }
-
+.mobile-menu-area{
+  display: none;
+}
 /* Navbar-component */
 .login-btn{
   display: flex;
@@ -21,6 +25,7 @@ li{
 .nav-logo{
   display: flex;
   justify-content: center;
+  position: relative;
 
 }
 .menu-area{
@@ -72,4 +77,98 @@ transform: scale(1.1);
 .login-btn{
   background-color: #fff;
   border: none;
+}
+/* product detail */
+.product-img{
+  display: flex;
+  justify-content: flex-end;
+  width: 400px;
+}
+.side-menu {
+  display: none;
+}
+.sub-box{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}
+.select-box{
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 14px;
+  border: 1px solid #bcb5b5;
+  outline: none;
+}
+.detail-font{
+  font-weight: 700;
+}
+.buy-btn{
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  background-color: #f76b6b;
+  color: #fff;
+  font-weight: 700;
+}
+/* mobile */
+@media(max-width:950px){
+  .menu-area{
+    display: none;
+  }
+  .mobile-menu-area{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .menu-list-box{
+    display: none;
+  }
+
+
+
+  .side-menu {
+    display: inline-block;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index:2;
+  }
+  .side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+  }
+  
+  .side-menu .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+  }
+  
+  .side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .side-menu-list button:hover {
+    background-color:#fff;
+    border-radius: 3px;
+  } 
+
+
 }

@@ -1,8 +1,13 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function ProductCard({item}) {
+    const navigate = useNavigate()
+    const showDetail = ()=>{
+        navigate(`/product/${item.id}`)
+    }
   return (
-    <div>
+    <div onClick={showDetail}>
         <div className='overflow-hidden'>
       <img className='card-img' src={item?.img} alt=''/>
         </div>
