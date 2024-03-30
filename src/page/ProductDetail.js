@@ -19,9 +19,11 @@ function ProductDetail() {
   }, []);
   return (
     <Container>
-      <Row>
+      <Row className="mobile-flex">
         <Col className="product-img">
-          <img src={product?.img} />
+          
+          <img className="detail-img" src={product?.img} />
+          
         </Col>
         <Col className="sub-box">
           <div className="detail-font">{product?.title}</div>
