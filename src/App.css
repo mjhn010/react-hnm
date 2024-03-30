@@ -1,4 +1,4 @@
-
+a{}
 
 .notosanskr * { 
  font-family: 'Noto Sans KR', sans-serif;
@@ -21,11 +21,13 @@ li{
   display: flex;
   justify-content: flex-end;
   margin-right: 1%;
+  color: #2f2f2f;
 }
 .nav-logo{
   display: flex;
   justify-content: center;
   position: relative;
+  color: #2f2f2f;
 
 }
 .menu-area{
