@@ -4,8 +4,10 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function Navbar({ authenticate, setAuthenticate }) {
+function Navbar({ setAuthenticate }) {
+  const authenticate = useSelector(state=>state.auth.authenticate)
   const navigate = useNavigate();
   const [width,setWidth] = useState(0)
   const [isShow,setIsShow] = useState(false)

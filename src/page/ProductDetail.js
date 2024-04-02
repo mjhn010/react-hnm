@@ -3,16 +3,16 @@ import { Container, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import {productAction} from '../redux/actions/productAction'
+import { useDispatch,useSelector } from "react-redux";
 
 function ProductDetail() {
-  const [product, setProduct] = useState(null);
+  const product = useSelector(state=>state.product.ProductDetail)
+  const dispatch = useDispatch();
   let { id } = useParams();
-  const getProductDetail = async () => {
-    let url = `https://my-json-server.typicode.com/mjhn010/react-hnm/products/${id}`;
-    let response = await fetch(url);
-    let data = await response.json();
-    console.log(data);
-    setProduct(data);
+  const getProductDetail = () => {
+    
+    dispatch(productAction.getProductDetail(id))
   };
   useEffect(() => {
     getProductDetail();
