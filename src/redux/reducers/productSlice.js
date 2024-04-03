@@ -41,9 +41,9 @@ const productSlide = createSlice({
   name: "product",
   initialState,
   reducers: {
-    getDetailProduct(state,action){
-        state.productDetail = action.payload.data;
-    }
+    // getDetailProduct(state,action){
+    //     state.productDetail = action.payload.data;
+    // }
   },
   extraReducers:(builder)=>{
     builder.addCase(fetchProducts.pending,(state)=>{
