@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useDispatch,useSelector } from "react-redux";
-import { fetchProductDetail } from "../redux/reducers/productDetailSlice";
+import { fetchProductDetail } from "../redux/reducers/productSlice";
 
 function ProductDetail() {
   const product = useSelector(state=>state.product.ProductDetail)
