@@ -12,6 +12,7 @@ function ProductAll() {
     const getProducts =  () =>{
         let searchQuery = query.get("q") || ""
        dispatch(fetchProducts(searchQuery))
+       console.log("data", productList);
     }
     useEffect(()=>{
         getProducts()

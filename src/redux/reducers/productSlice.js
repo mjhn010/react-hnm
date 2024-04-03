@@ -24,6 +24,7 @@ export const fetchProductDetail = createAsyncThunk(
     try {
       let url = `https://my-json-server.typicode.com/mjhn010/react-hnm/products/${id}`;
       let response = await fetch(url);
+      console.log( await response.json())
       return await response.json();
     } catch (error) {
       thunkApi.rejectWithValue(error.message);
