@@ -5,7 +5,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { fetchProductDetail } from "../redux/reducers/productSlice";
 
 function ProductDetail() {
-  const product = useSelector(state=>state.product.ProductDetail)
+  const product = useSelector(state=>state.product.productSlice)
   const dispatch = useDispatch();
   let { id } = useParams();
   const getProductDetail = () => {
@@ -19,7 +19,7 @@ function ProductDetail() {
       <Row className="mobile-flex">
         <Col className="product-img">
           
-          <img className="detail-img" src={product?.img} />
+          <img className="detail-img" src={product?.ProductDetail.img} />
           
         </Col>
         <Col className="sub-box">
