@@ -9,7 +9,6 @@ function ProductDetail() {
   const dispatch = useDispatch();
   let { id } = useParams();
   const getProductDetail = () => {
-    
     dispatch(fetchProductDetail(id))
   };
   useEffect(() => {
